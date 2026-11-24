@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mhmd & Ruba ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:'Cairo',sans-serif;
+ color:white;
+ text-align:center;
+ background:linear-gradient(135deg,#21152f,#693e78,#bd719a,#43366f);
+ background-size:300% 300%;
+ animation:bg 12s infinite;
+ overflow-x:hidden;
+}
+@keyframes bg{50%{background-position:100% 100%}}
+button{font-family:inherit;cursor:pointer}
+#intro{
+ position:fixed;inset:0;z-index:10;
+ display:flex;flex-direction:column;
+ justify-content:center;align-items:center;
+ padding:25px;
+ background:linear-gradient(145deg,#29183f,#985080,#e28bab);
+ transition:1s;
+}
+#intro h1{font-size:40px;margin:10px}
+#intro p{font-size:17px}
+.open{
+ background:white;color:#9d477e;
+ border:0;border-radius:35px;
+ padding:15px 35px;font-size:17px;
+ font-weight:bold;
+ box-shadow:0 5px 25px #ffffff55;
+}
+#main{display:none;padding:20px 14px 50px}
+.hero{padding:50px 10px 35px}
+.hero h1{font-size:38px;margin:5px}
+.hero p{line-height:2}
+.heart{font-size:60px;animation:pulse 1.5s infinite}
+@keyframes pulse{50%{transform:scale(1.2)}}
+.section{
+ max-width:680px;margin:25px auto;padding:25px 18px;
+ background:#ffffff19;
+ border:1px solid #ffffff35;
+ border-radius:25px;
+ backdrop-filter:blur(12px);
+ box-shadow:0 8px 30px #160c3040;
+}
+h2{color:#ffe0f0}
+.message{line-height:2.3;font-size:16px;white-space:pre-line}
+#typed{min-height:180px}
+.counter{font-size:34px;font-weight:bold;color:#ffe2f2}
+.answers{display:grid;gap:12px;margin-top:20px}
+.answers button{
+ padding:13px;border:1px solid #ffffff60;
+ border-radius:15px;background:#ffffff20;
+ color:white;font-size:15px;
+}
+.answers button:active{background:#e78ab5}
+.question{font-size:19px;line-height:1.8;font-weight:bold}
+#result{line-height:2}
+.floating{
+ position:fixed;bottom:-40px;
+ pointer-events:none;animation:float 9s linear forwards;
+ z-index:0;
+}
+@keyframes float{
+ to{transform:translateY(-115vh) rotate(360deg);opacity:0}
+}
+#main>*{position:relative;z-index:1}
+footer{padding:35px 10px;color:#ffe3f2}
+</style>
+</head>
+
+<body>
+
+<div id="intro">
+ <div class="heart">❤️</div>
+ <h1>إلى رُبى</h1>
+ <p>هيدا العالم إلك... وإلي، وما فيه غير نحنا التنين.</p>
+ <button class="open" onclick="openWorld()">افتحي عالمنا 💗</button>
+ <p style="font-size:12px;margin-top:25px">Made with love by Mhmd</p>
+</div>
+
+<audio id="music" loop>
+ <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div id="main">
+
+ <div class="hero">
+  <div class="heart">💗</div>
+  <h1>Mhmd & Ruba</h1>
+  <p>حكاية حب ما إلها نهاية...</p>
+  <p>أهلاً في عالمنا الصغير يا رُبى ❤️</p>
+ </div>
+
+ <div class="section">
+  <h2>💌 رسالة إلك يا رُبى</h2>
+  <div class="message" id="typed"></div>
+ </div>
+
+ <div class="section">
+  <h2>⏳ حكايتنا</h2>
+  <p>من 25 أبريل 2025 بلّشت حكايتنا</p>
+  <div class="counter" id="days"></div>
+  <p>يوم من الحب والذكريات ❤️</p>
+ </div>
+
+ <div class="section">
+  <h2>🎀 قديش بتعرفيني؟</h2>
+  <p>يلا يا رُبى، خلينا نشوف قديش بتعرفي محمد!</p>
+  <div id="game">
+   <p class="question" id="question"></p>
+   <div class="answers" id="answers"></div>
+   <p id="result"></p>
+  </div>
+ </div>
+
+ <div class="section">
+  <h2>💍 وعد مني إلك</h2>
+  <p class="message">
+بوعدك ضل اختارك كل يوم،
+وبوعدك ما خلي المسافات تنسّينا قديش منحب بعض.
+
+بوعدك كون حدّك بفرحك وزعلك،
+وبكل لحظة صعبة تمرق علينا.
+
+يمكن ما فيني أعطيكي العالم كله،
+بس فيني أعطيكي قلبي بكل اللي فيه.
+
+يا رب كل أحلامنا تصير حقيقة،
+وكل الطرق اللي منمشيها توصلنا لبعض.
+
+بحبك يا رُبى...
+اليوم وبكرا وكل العمر ❤️
+  </p>
+ </div>
+
+ <div class="section">
+  <h2>🌙 رسالة أخيرة</h2>
+  <p class="message">
+إذا رجع فيي الزمن ألف مرة،
+رح اختارك إنتِ بكل مرة.
+
+لأنك مش بس حبيبتي...
+إنتِ الشخص اللي بدي كمّل معه العمر كله.
+
+إنتِ وأنا... قصة وحدة ❤️
+  </p>
+  <div class="heart">💞</div>
+ </div>
+
+ <footer>
+  <h2>Forever Us ❤️</h2>
+  <p>Mhmd & Ruba</p>
+  <p>قصتنا بعدها بأولها...</p>
+ </footer>
+
+</div>
+
+<script>
+
+// تاريخ بداية علاقتنا ❤️
+const startDate=new Date(2026,11,20);
+
+function openWorld(){
+ document.getElementById('intro').style.opacity='0';
+ setTimeout(()=>{
+  document.getElementById('intro').style.display='none';
+  document.getElementById('main').style.display='block';
+  document.getElementById('music').play().catch(()=>{});
+  typeMessage();
+ },900);
+}
+
+const message=`رُبى حبيبتي...
+
+بعرف إنو الكلمات أوقات ما بتكفي حتى عبّرلك عن اللي بقلبي.
+
+بس بدي تعرفي إنك مش شخص عادي بحياتي،
+إنتِ الضحكة اللي بتغيّر يومي،
+والتفصيل الحلو اللي بحبّه بكل أيامي.
+
+يمكن نتخانق، ويمكن نزعل،
+ويمكن تمرق أيام صعبة،
+بس في شغلة وحدة ما بتتغير...
+إني بحبك وبدي ياكي بحياتي.
+
+يا رب كل أحلامنا تصير حقيقة،
+وكل الطرق اللي منمشيها توصلنا لبعض.
+
+يا أجمل صدفة بحياتي...
+بحبك يا رُبى ❤️`;
+
+function typeMessage(){
+ let i=0;
+ const el=document.getElementById('typed');
+ function next(){
+  if(i<message.length){
+   el.textContent+=message.charAt(i++);
+   setTimeout(next,38);
+  }
+ }
+ next();
+}
+
+function updateDays(){
+ const today=new Date();
+ const start=new Date(2025,3,25);
+ const diff=Math.floor(
+  (Date.UTC(today.getFullYear(),today.getMonth(),today.getDate())-
+   Date.UTC(start.getFullYear(),start.getMonth(),start.getDate()))/86400000
+ );
+ document.getElementById('days').textContent=
+ diff>=0?diff.toLocaleString('en-US')+' ❤️':'❤️';
+}
+updateDays();
+
+const questions=[
+ {q:"شو أكتر شي بحبّه في رُبى؟",a:["اكيدد كل شي فيها ❤️","عيونها ","ضحكتها 😅"],c:0},
+ {q:"إذا زعلت رُبى، شو لازم أعمل؟",a:["صالحها وأراضيها ❤️","اتركها","نام "],c:0},
+ {q:"شو أهم شي بعلاقتنا؟",a:["الحب والثقة ❤️","المنافسة","مين بيربح"],c:0},
+ {q:"وين بتمنى نكون بالمستقبل؟",a:["سوا وتحت سقف واحد 💍","بعيدين","كل واحد ببلد"],c:0},
+ {q:"قديش بحب رُبى؟",a:["قد الدنياواكتر بكتيررررر❤️","شوي","ما بعرف 😂"],c:0}
+];
+
+let current=0,score=0;
+
+function showQuestion(){
+ if(current>=questions.length){
+  document.getElementById('question').textContent="خلص الاختبار يا رُبى! 💗";
+  document.getElementById('answers').innerHTML="";
+  document.getElementById('result').innerHTML=
+  `نتيجتك: ${score} من ${questions.length}<br>
+  بس تذكري إنك دايماً رابحة بقلبي ❤️
+  <br><button class="open" onclick="restart()">عيدي اللعبة</button>`;
+  return;
+ }
+
+ const q=questions[current];
+ document.getElementById('question').textContent=q.q;
+ document.getElementById('result').textContent="";
+ document.getElementById('answers').innerHTML="";
+
+ q.a.forEach((answer,index)=>{
+  const b=document.createElement('button');
+  b.textContent=answer;
+  b.onclick=()=>{
+   if(index===q.c){
+    score++;
+    document.getElementById('result').textContent="برافو يا روحي! ❤️";
+   }else{
+    document.getElementById('result').textContent="ههههه مش هيك يا رُبى 😘";
+   }
+   current++;
+   setTimeout(showQuestion,1200);
+  };
+  document.getElementById('answers').appendChild(b);
+ });
+}
+
+function restart(){
+ current=0;score=0;showQuestion();
+}
+showQuestion();
+
+function createHeart(){
+ const h=document.createElement('div');
+ h.className='floating';
+ h.textContent=['❤️','💕','💗','✨','💖'][Math.floor(Math.random()*5)];
+ h.style.left=Math.random()*100+'%';
+ h.style.fontSize=(15+Math.random()*20)+'px';
+ h.style.animationDuration=(6+Math.random()*7)+'s';
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),14000);
+}
+setInterval(createHeart,650);
+
+</script>
+</body>
+</html>
